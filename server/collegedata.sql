@@ -5,6 +5,11 @@ CREATE TABLE IF NOT EXISTS colleges (
     id INT AUTO_INCREMENT PRIMARY KEY,
     college_code VARCHAR(50) UNIQUE
 );
+Insert into colleges (college_code) values
+("PREC01"),
+("AMRT45"),
+("PVP12");
+                                          
 
 CREATE TABLE IF NOT EXISTS studentinfo (
 	
@@ -14,6 +19,10 @@ CREATE TABLE IF NOT EXISTS studentinfo (
     FOREIGN KEY (college_code) REFERENCES colleges(college_code)
  
 );
+INSERT INTO studentinfo (username,password,college_code) VALUES
+("user1","pass1","PREC01"),
+("user2","pass2","AMRT45"),
+("user3","pass3","PVP12");
 
 CREATE TABLE IF NOT EXISTS student (
     stud_id INT AUTO_INCREMENT PRIMARY KEY,
